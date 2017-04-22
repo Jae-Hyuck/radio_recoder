@@ -5,7 +5,7 @@ FM4U 녹음용 파이썬 스크립트
 ```sh
 $ crontab -e
 ```
-Fro example (새벽 3시부터 3800초)
+For example (새벽 3시부터 3800초)
 ```sh
 0 3 * * * python3 /home/jae/extern/Projects/radio_recoder/radio_recoder.py --record_secs 3800 --output_dir /home/jae/Dropbox/MBC_RADIO
 ```
