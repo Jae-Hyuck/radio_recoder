@@ -16,10 +16,10 @@ def recording(FLAGS):
     os.makedirs(FLAGS.output_dir, exist_ok=True)
     start_time = datetime.datetime.now().strftime('%Y%m%d%H%M%S')
     flv_file = osp.join('/tmp', 'FM4U_' + start_time + '.flv')
-    mp3_file = osp.join(FLAGS.output_dir, 'FM4U_' + start_time + '.aac')
+    aac_file = osp.join(FLAGS.output_dir, 'FM4U_' + start_time + '.aac')
 
     rtmpdump = ['rtmpdump', '-r', rtmp_addr, '-B', str(FLAGS.record_secs), '-o', flv_file]
-    ffmpeg = ['ffmpeg', '-i', flv_file, '-vn', '-acodec', 'copy', mp3_file]
+    ffmpeg = ['ffmpeg', '-i', flv_file, '-vn', '-acodec', 'copy', aac_file]
     rm = ['rm', flv_file]
 
     p = subprocess.Popen(rtmpdump)
