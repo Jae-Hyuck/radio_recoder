@@ -7,7 +7,7 @@ $ crontab -e
 ```
 For example (새벽 3시부터 3600초)
 ```sh
-0 3 * * * python3 /home/jae/extern/Projects/radio_recoder/radio_recoder.py --record_secs 3800 --output_dir /home/jae/Dropbox/MBC_RADIO
+0 3 * * * python3 /home/jae/extern/Projects/radio_recoder/radio_recoder.py --record_secs 3600 --output_dir /home/jae/Dropbox/MBC_RADIO
 ```
 
 ### References
