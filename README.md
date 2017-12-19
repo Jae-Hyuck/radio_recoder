@@ -2,8 +2,8 @@
 FM4U 녹음용 파이썬 스크립트
 
 ### Prerequisite
-sudo apt install rtmpdump
-sudo apt install ffmpeg
+* sudo apt install rtmpdump
+* sudo apt install ffmpeg
 
 ### Edit crontab
 ```sh
