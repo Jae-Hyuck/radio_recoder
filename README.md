@@ -2,8 +2,9 @@
 FM4U 녹음용 파이썬 스크립트
 
 ### Prerequisite
-* sudo apt install rtmpdump
-* sudo apt install ffmpeg
+- sudo apt install rtmpdump
+- sudo apt install ffmpeg
+- (optional) Dropbox-Uploader (https://github.com/andreafabrizi/Dropbox-Uploader)
 
 ### Edit crontab
 ```sh
@@ -11,8 +12,8 @@ $ crontab -e
 ```
 For example (새벽 0시부터 1800초, 새벽 1시부터 1800초)
 ```sh
-0 0 * * * python3 ~/radio_recoder/radio_recoder.py --record_secs 1800 --output_dir ~/Dropbox/MBC_RADIO
-0 1 * * * python3 ~/radio_recoder/radio_recoder.py --record_secs 1800 --output_dir ~/Dropbox/MBC_RADIO
+0 0 * * * python3 ~/radio_recoder/radio_recoder.py --record_secs 3600 --output_dir ~/MBC_RADIO --dropbox_uploader ~/Util/Dropbox-Uploader/dropbox_uploader.sh
+0 1 * * * python3 ~/radio_recoder/radio_recoder.py --record_secs 3600 --output_dir ~/MBC_RADIO --dropbox_uploader ~/Util/Dropbox-Uploader/dropbox_uploader.sh
 ```
 
 ### References

@@ -28,6 +28,11 @@ def recording(FLAGS):
     p.wait()
     p = subprocess.Popen(rm)
     p.wait()
+    if FLAGS.dropbox_uploader:
+        dropbox = [osp.expanduser(FLAGS.dropbox_uploader), 'upload', aac_file, '/']
+        p = subprocess.Popen(dropbox)
+        p.wait()
+
 
 if __name__ == "__main__":
     ############
@@ -38,6 +43,7 @@ if __name__ == "__main__":
     # required arguments
     parser.add_argument('--record_secs', type=int, required=True)
     parser.add_argument('--output_dir', type=str, required=True)
+    parser.add_argument('--dropbox_uploader', type=str, default=None)
 
     FLAGS = parser.parse_args()
 
